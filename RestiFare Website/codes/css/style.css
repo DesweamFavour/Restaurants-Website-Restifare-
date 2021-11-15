@@ -1,0 +1,505 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: arial;
+    transition: all 0.3s ease;
+    scroll-behavior: smooth;
+}
+body{
+    color: #4e4e4e;
+}
+header{
+    background: rgba(0, 0, 0, 0.72);
+    color: #ffffff;
+    padding: 1.5rem;
+    position: fixed;
+/*    background: transparent;*/
+    width: 80%;
+    height: 8vh;
+    z-index: 1;
+    font-size: 1.5vw;
+}
+header h1 span{
+    color: orange;
+}
+header nav{
+    width: 75%;
+}
+header nav ul{
+    list-style-type: none;
+}
+a{
+    color: #ffffff;
+}
+nav ul li a:hover{
+    color: orange;
+}
+nav ul li #dropdown{
+    display: none;
+    position: absolute;
+    margin: 1.6rem 0;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    background: rgba(0, 0, 0, 0.72);
+    -webkit-transition: all 4s;
+}
+nav ul li #dropdown li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 100%;
+}
+nav ul li ul li:first-child{
+    border-bottom: 1px solid #ffffff;
+}
+nav ul li:nth-child(4) a{
+    display: relative;
+    padding: 1.7rem;
+}
+nav ul li #dropdown li a{
+    width: 100%;
+    padding: 0.8rem 0.3rem;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+nav ul li #dropdown li a:hover{
+    background: #ffffff;
+}
+nav ul li:nth-child(4) a:hover ~ ul#dropdown{
+    display: block;
+    -webkit-transition: all 2s;
+}
+.hero{
+    background-image: url(../../assets/most-romantic-restaurants-abuja-rs-1.jpg);
+    border: 1px solid #000;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+#overlay{
+    background: rgba(0, 0, 0, 0.30);
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+#overlay h1{
+    font-size: 6vw;
+    padding: 0.6rem;
+}
+#overlay p{
+    font-size: 1.6vw;
+    text-align: center;
+    padding: 0.2vw;
+}
+#overlay button{
+    margin-top: 5vh;
+    padding: 1.5vw;
+    font-size: 1.5vw;
+    border: none;
+    background: #f58451;
+    color: #ffffff;
+    border-radius: 1vw;
+    border: 2px solid #f58451;
+}
+#overlay button:hover{
+    border: 2px solid #f58451;
+    background: transparent;
+    color: #f58451;
+}
+.intro{
+    padding: 2.5rem;
+    align-items: flex-start;
+}
+.intro .description{
+    padding: 1rem;
+    color: #505050;
+    width: 30vw;
+}
+.intro .description h5{
+    padding-bottom: 0.3rem;
+    color: #29d400;
+}
+.intro .description h1{
+    padding: 1rem 0;
+    font-size: 2.5vw;
+}
+.intro .description p{
+    padding: 1rem 0;
+    font-size: 1.5vw;
+}
+.intro .image-container{
+    border-radius: 0.7rem;
+    overflow: hidden;
+    width: 60%;
+}
+.intro .image-container img{
+    transition: all 0.3s;
+    border-radius: 0.7rem;
+    width: 100%;
+}
+.intro .image-container img:hover{
+    transform: scale(1.2);
+}
+hr{
+    display: none;
+}
+.infos-section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+}
+.infos{
+    width: 30%;
+    display: flex;
+    flex-flow: column;
+    padding: 2rem 0;
+    justify-content: space-around;
+}
+.infos #box{
+    
+}
+.infos #box img{
+    width: 40%;
+/*    transition: 1s ease;*/
+}
+.infos #box span{
+    position: absolute;
+    margin-top: -5rem;
+    margin-left: 3.5rem;
+    width: 2%;
+    height: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    transition: all 0.5s;
+}
+.infos #box img:hover{
+    animation: RandM 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+    cursor: grab;
+}
+
+.infos #box img:hover ~ span{
+    color: #14BF98;
+}
+
+@keyframes RandM{
+    from{
+        transform: none;
+        margin-left: 0rem;
+    }
+    to{
+        margin-left: 12rem;
+        transform: rotate(180deg);
+    }
+}
+
+.infos h3{
+    padding: 1rem 0;
+}
+.infos p{
+    font-size: 1.2vw;
+}
+
+.service-page{
+    width: 100%;
+    background: #fafafa;
+}
+#service-container{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 5rem;
+}
+.service-page h4{
+    color: #14BF98;
+    padding: 0.5rem;
+}
+.service-page h1{
+    width: 45%;
+    text-align: center;
+}
+.service-page .services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin: 3rem 0;
+}
+.service-page .services #services-list{
+    width: 30%;
+    border: 1px solid #ccc;
+    background: #ffffff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    padding-bottom: 1.5rem;
+    margin-bottom: 3rem;
+}
+.service-page .services #services-list h2{
+    text-align: center;
+    padding: 2rem;
+}
+.service-page .services #services-list p{
+    padding: 0 2rem;
+}
+.service-page .services #services-list ul{
+    padding: 1rem 2rem;
+    width: 100%;
+    list-style-type: none;
+}
+#services-list ul li{
+    padding: 0.6rem 0;
+    display: flex;
+    align-items: center;
+}
+#services-list ul li::before{
+    content: "\2022"; /* Add content: \2022 is the css code/unicode for a bullet */
+    color: #14BF98;
+    font-weight: bolder;
+    display: inline-block;
+    width: 0.7em;
+    height: 0.7em;
+    margin-right: 1em;
+    text-align: center;
+    vertical-align: middle;
+    background: #14BF98;
+    border: none;
+}
+.service-page .services #services-list ul li span{
+    height: 1rem;
+    width: 1rem;
+    padding: 0.005vh 0.3rem;
+    background-color: #14BF98;
+    border-radius: 0.2rem;
+    margin-right: 1rem;
+}
+.service-page .services #services-list img{
+    width: 100%;
+}
+.service-page .services #services-list h3{
+    padding: 1rem 0;
+}
+.service-page .services #services-list h3 span{
+    color: #14BF98;
+}
+.service-page .services #services-list button{
+    width: 7rem;
+    padding: 1rem;
+    color: #ffffff;
+    position: absolute;
+    background-color: #14BF98;
+    border: none;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    margin-top: 33.5rem;
+    transition: all 0.5s;
+}
+.service-page .services #services-list button:hover{
+    color: #14BF98;
+    background-color: #ffffff;
+    border: 1px solid #14BF98;
+}
+    
+
+/************                      ****************
+**************     Service Part 2    **************
+***************                        ***********/
+    
+    
+    
+#service-part2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+} 
+.service-part2-container{
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#service-part2 img{
+    width: 50%;
+    height: 100%;
+}
+#service-part2 #Accelerate{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    padding: 5rem;
+    flex-flow: column;
+    align-items: center;
+    font-family: Berlin Sans FB;
+    justify-content: center;
+    background: linear-gradient(90deg, #ffffff, #cccccc);
+}
+.service-part2-container .accelerate2{
+    background: linear-gradient(-90deg, #ffffff, #dedede)!important;
+}
+#service-part2 #Accelerate h1{
+    text-align: left;
+    padding: 1rem 0;
+    font-size: 1.8rem;
+    width: 100%;
+}
+#service-part2 #Accelerate ul{
+    list-style-position: inside;
+    width: 100%;
+}
+#service-part2 #Accelerate ul li{
+    padding: 0.5rem 0;
+    font-family: calibri;
+    list-style-type: none;
+}
+#service-part2 #Accelerate:last-child ul li::before{
+    content: "\2022"; /* Add content: \2022 is the css code/unicode for a bullet */
+    color: #14BF98;
+    font-weight: bolder;
+    display: inline-block;
+    width: 1.2rem;
+    text-align: center;
+    border: 2px solid #14BF98;
+    border-radius: 1rem;
+}
+#service-part2 #Accelerate ul li a{
+    color: #4a4a4a;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    margin-left: 0.8rem;
+}
+#service-part2 #Accelerate ul li p{
+    width: 80%;
+    padding: 0.5rem 0;
+    margin-left: 2.5rem;
+}
+#service-part2 #Accelerate ul li a:hover{
+    color: #14BF98;
+}
+/*
+#service-part2 #Accelerate ul li a:hover ~ #service-part2 #Accelerate ul li::before:hover{
+    background-color: #14BF98;
+    color: #ffffff;
+}
+*/
+#service-part2 #Accelerate2 ul li a:active{
+    color: #14BF98;
+}
+
+#service-part2 #Accelerate #menus ul{
+    border: 1px solid red;
+    display: flex;
+    width: 100%;
+}
+
+
+/**************
+***************
+
+
+    customers
+
+***************
+****************
+
+
+
+/*************************************
+    ==============================
+        ======================
+            ===============
+    
+             Media Queries
+    
+            ===============
+        ======================
+    ===============================
+**************************************/
+    
+    
+    
+    
+
+@media only screen and (max-width: 750px){
+            
+    body{
+/*        background: red;*/
+    }
+    header{
+        padding: 0.5rem;
+        padding-bottom: 0;
+        background: #181d45;
+    }
+    header h1{
+        width: 100%;
+        text-align: center;
+    }
+    nav{
+        padding: 0.5rem 0;
+    }
+    nav ul li a{
+        color: #ccc;
+    }
+    nav ul li a:hover{
+        color: #ffffff;
+    }
+    .hero, #overlay{
+        height: 90vh;
+    }
+    .intro{
+        padding: 2.5rem;
+        align-items: flex-start;
+    }
+    .intro .description{
+        padding: 1rem;
+        color: #505050;
+        width: 100%;
+    }
+    .intro .description h1{
+        font-size: 5.5vw;
+/*        line-height: 3rem;*/
+    }
+    .intro .description p{
+        font-size: 2.5vw;
+    }
+    .intro .image-container{
+        margin-top: 5vh;
+        border-radius: 0.3rem;
+        width: 95%;
+    }
+    .intro .image-container img{
+        border-radius: 0.3rem;
+    }
+    .intro .image-container img:hover{
+        transform: scale(1.2);
+    }
+    hr{
+        border: 1px solid #ccc;
+        display: block;
+        width: 100%;
+    }
+
+}
+
+@media only screen (min-height: 400px){
+    header{
+        background: red;
+    }
+}
